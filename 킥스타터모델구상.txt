@@ -1,0 +1,36 @@
+창업주 아이디 - DBPS
+프로젝트 이름 - DBPS
+분류(대분류) - x1
+분류(소분류) - x2
+통화종류(자원) - 환산법
+펀딩마감 - x3
+목표 - x4
+펀딩출시 - x5
+서명원수 - x6
+프로젝트상태 - y
+서명국가 - DBPS
+usd로 서명된 양 - remove
+
+
+모델기능 :: 다중출력 
+[
+X1 - SELECT
+X2 - SELECT
+X3 - PREPROCESSED DATA FORM
+X4 - PREPROCESSED DATA FORM
+X5 - PREPROCESSED DATA FORM
+X6 - PREPROCESSED DATA FORM
+X7 - INVESTMENT_TF//INVESTMENT_TRI_CLASSIFI
+]
+[
+O1 :: 투자가능여부(TRI분류) - 갖가지 가능성에 대한 그래프 시각화 중요
+O_ETC :: 제안 가능(투자트렌드top5)
+]
+
+
+MODEL_TRAIN_DATA
+x1,x2 :: title of Input
+x3,x5 = connection by subtract(x5,x3)
+x4 = rate(total) => effect label
+x6 = effect label
+currency = label_result_support_concept
